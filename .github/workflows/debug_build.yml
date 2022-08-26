@@ -116,6 +116,16 @@ jobs:
           path: |
             ${{ env.APK_DIR_PATH }}/${{ env.APK_BASENAME_PREFIX }}_x86.apk
             ${{ env.APK_DIR_PATH }}/output-metadata.json
+            
+      - name: Attach x86 APK file With tar.xz 
+        uses: actions/upload-artifact@v3
+        with:
+            archive: tar
+            compression: xz
+            name: ${{ env.APK_BASENAME_PREFIX }}_x86
+            path: |
+              ${{ env.APK_DIR_PATH }}/${{ env.APK_BASENAME_PREFIX }}_x86.apk
+              ${{ env.APK_DIR_PATH }}/output-metadata.json
 
       - name: Attach sha256sums file
         uses: actions/upload-artifact@v2
