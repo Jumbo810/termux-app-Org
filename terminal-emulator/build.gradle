@@ -66,7 +66,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.termux'
-                artifactId = 'terminal-emulator'
+                // artifactId = 'terminal-emulator'
                 version = '0.118.0'
                 artifact(sourceJar)
             }
