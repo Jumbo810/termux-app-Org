@@ -38,25 +38,25 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.termux"
+        applicationId "com.vscode"
         minSdkVersion project.properties.minSdkVersion.toInteger()
         targetSdkVersion project.properties.targetSdkVersion.toInteger()
-        versionCode 118
-        versionName "0.118.0"
+        versionCode 810
+        versionName "8.1.0"
 
         if (appVersionName) versionName = appVersionName
         validateVersionName(versionName)
 
         buildConfigField "String", "TERMUX_PACKAGE_VARIANT", "\"" + project.ext.packageVariant + "\"" // Used by TermuxApplication class
 
-        manifestPlaceholders.TERMUX_PACKAGE_NAME = "com.termux"
+        manifestPlaceholders.TERMUX_PACKAGE_NAME = "com.vscode"
         manifestPlaceholders.TERMUX_APP_NAME = "Termux"
-        manifestPlaceholders.TERMUX_API_APP_NAME = "Termux:API"
-        manifestPlaceholders.TERMUX_BOOT_APP_NAME = "Termux:Boot"
-        manifestPlaceholders.TERMUX_FLOAT_APP_NAME = "Termux:Float"
-        manifestPlaceholders.TERMUX_STYLING_APP_NAME = "Termux:Styling"
-        manifestPlaceholders.TERMUX_TASKER_APP_NAME = "Termux:Tasker"
-        manifestPlaceholders.TERMUX_WIDGET_APP_NAME = "Termux:Widget"
+        // manifestPlaceholders.TERMUX_API_APP_NAME = "Termux:API"
+        // manifestPlaceholders.TERMUX_BOOT_APP_NAME = "Termux:Boot"
+        // manifestPlaceholders.TERMUX_FLOAT_APP_NAME = "Termux:Float"
+        // manifestPlaceholders.TERMUX_STYLING_APP_NAME = "Termux:Styling"
+        // manifestPlaceholders.TERMUX_TASKER_APP_NAME = "Termux:Tasker"
+        // manifestPlaceholders.TERMUX_WIDGET_APP_NAME = "Termux:Widget"
 
         externalNativeBuild {
             ndkBuild {
